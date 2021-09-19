@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!-- 作为一个模块 用 view 框起来 -->
+
+<!-- 搜索框模块 -->
+<view class="search">
+  <input placeholder="请输入要搜索的商品" ></input>
+  <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/search.png" 
+  style="width: 50rpx; height: 50rpx;"></image>
+</view>
+
+<!-- 轮播图 -->
+<view class="banner">
+  <!-- interval设置循环时长 -->
+  <swiper class="banner_1" autoplay="true" circular="true" interval="2000" indicator-dots="true">
+  <swiper-item wx:for="{{banner}}" wx:key = "_id">
+  <image src="{{item.src}}" class="img"></image>
+  </swiper-item>
+  </swiper>
+</view>
+
+<!-- 分类模块 -->
+<view  class="fenlei">
+  <view class="fenlei_1" wx:for="{{fenlei}}" wx:key = "_id">
+    <image src = "{{item.src}}" style="width: 70rpx;height: 70rpx;"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+
+<!-- 产品列表 -->
+<view class="product">
+  <!-- 分割线 -->
+  <view class="line"></view>
+    <view class="product_1" wx:for="{{product}}" wx:key="_id">
+      <image src="{{item.src}}" class="img_1"></image>
+        <view class="product_2">
+          <text>{{item.name}}:￥{{item.price}}</text>
+            <text style="font-size: 25rpx;font-weight: 800;">销量:{{item.num}}</text>
+        </view>
+    </view>
+</view>

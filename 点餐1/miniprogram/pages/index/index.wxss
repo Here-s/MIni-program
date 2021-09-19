@@ -1,0 +1,117 @@
+Page{
+  background-color: rgb(82, 190, 233);
+}
+
+/* 搜索框 */
+.search{
+  width: 80%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(10, 72, 134);
+  border-radius: 50rpx;
+  padding-left: 50rpx;
+  padding-right: 40rpx;
+  margin-top: 10rpx;
+  /* 居中 */
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.banner{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 15rpx;
+}
+
+.banner_1{
+  width: 700rpx;
+  height: 350rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.img{
+  width: 700rpx;
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+
+/* 分类模块 */
+.fenlei{
+  width: 94%;
+  height: 150rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(210, 241, 240);
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+.fenlei_1{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+/* 分割线 */
+.line{
+  width: 100%;
+  height: 5rpx;
+  background-color: rgb(136, 135, 135);
+  margin-top: rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 商品 */
+.product{
+  width: 94%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.product_1{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+.img_1{
+  width: 325rpx;
+  height: 325rpx;
+  border-radius: 20rpx;
+}
+
+.product_2{
+  display: flex;
+  flex-direction: row;
+  height: 50rpx;
+  border: 1rpx solid silver;
+  width: 90%;
+  background-color: snow;
+  border-radius: 10rpx;
+  align-items: center;
+  /* 向两边分布 */
+  justify-content: space-between;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
