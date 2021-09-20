@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/fenlei/fenlei",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
     "pages/deployService/index",
@@ -11,7 +12,8 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index"
+    "pages/sumRecordResult/index",
+    "pages/product_detail/product_detail"
   ],
   "window": {
     "backgroundColor": "#ff6801",
@@ -19,6 +21,22 @@
     "navigationBarBackgroundColor": "#ff6801",
     "navigationBarTitleText": "同大线上点餐",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./pages/img/首 页.png",
+        "selectedIconPath": "./pages/img/首页-选中.png"
+      },
+      {
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "./pages/img/分类.png",
+        "selectedIconPath": "./pages/img/分类选中.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

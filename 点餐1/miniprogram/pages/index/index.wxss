@@ -4,7 +4,7 @@ Page{
 
 /* 搜索框 */
 .search{
-  width: 80%;
+  width: 82%;
   height: 60rpx;
   display: flex;
   flex-direction: row;
@@ -18,6 +18,26 @@ Page{
   align-self: center;
   justify-content: space-between;
   background-color: #fff;
+}
+
+/* 搜索列表 */
+.list{
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(208, 232, 248);
+  height: 300rpx;
+  align-self: center;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+}
+.list_1{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .banner{
@@ -63,6 +83,10 @@ Page{
   align-items: center;
   justify-content: center;
   border-radius: 10rpx;
+}
+.fenlei_2{
+  display: flex;
+  flex-direction: column;
 }
 
 /* 分割线 */

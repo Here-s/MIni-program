@@ -1,4 +1,4 @@
-// pages/updateRecord/index.js
+// pages/fenlei/fenlei.js
 Page({
 
   /**

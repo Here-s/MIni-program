@@ -3,7 +3,31 @@ const db = wx.cloud.database()
 Page({
   data:{
     banner:[],
-    fenlei:[]
+    fenlei:[],
+    product:[],
+    search:[]
+  },
+  search:function(e){
+    let that = this
+    db.collection('product').where({
+      name:e.detail.value
+    }).get({
+      success:function(res){
+        that.setData({
+          search:res.data
+        })
+        console.log('搜索成功',that.data.search)
+        if(that.data.search == ""){
+          wx.showToast({
+            title: '未找到商品',
+            icon:"none"
+          })
+        }
+      },
+      fail:function(res){
+        console.log('搜索失败',res)
+      },
+    })
   },
 
   onLoad:function(){

@@ -1,3 +1,4 @@
+// pages/createCollection/index.js
 Page({
 
   /**

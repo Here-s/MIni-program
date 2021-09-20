@@ -1,4 +1,4 @@
-// pages/updateRecord/index.js
+// pages/product_detail/product_detail.js
 Page({
 
   /**

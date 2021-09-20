@@ -1,4 +1,4 @@
-// miniprogram/pages/deployService/index.js
+// pages/deployService/index.js
 Page({
 
   /**
