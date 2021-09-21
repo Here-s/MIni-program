@@ -3,9 +3,9 @@
 
 <!-- 搜索框模块 -->
 <view class="search">
-  <input placeholder="请输入要搜索的商品" bindconfirm="search" confirm-type="done"></input>
-  <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/search.png" 
-  style="width: 50rpx; height: 50rpx;"></image>
+  <input placeholder="输入要搜索的商品并回车" bindconfirm="search" confirm-type="done"></input>
+  <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/search.png"
+    style="width: 50rpx; height: 50rpx;" ></image>
 </view>
 
 <!-- 搜索列表 -->
@@ -15,25 +15,29 @@
     <view>商品：{{item.name}}</view>
     <view style="margin-right: 50rpx;">价格：￥{{item.price}}</view>
   </navigator>
-  <view class="line"></view>
 </view>
 
 <!-- 轮播图 -->
 <view class="banner">
   <!-- interval设置循环时长 -->
+
   <swiper class="banner_1" autoplay="true" circular="true" interval="2000" indicator-dots="true">
-  <swiper-item wx:for="{{banner}}" wx:key = "_id">
-  <image src="{{item.src}}" class="img"></image>
-  </swiper-item>
+    <navigator class="banner_1" url="../product_detail/product_detail?id={{item._id}}">
+      <swiper-item wx:for="{{product}}" wx:key="_id">
+        <image src="{{item.src[0]}}" class="img"></image>
+      </swiper-item>
+    </navigator>
   </swiper>
+
+
 </view>
 
 <!-- 分类模块 -->
-<view  class="fenlei">
-  <view class="fenlei_1" wx:for="{{fenlei}}" wx:key = "_id">
+<view class="fenlei">
+  <view class="fenlei_1" wx:for="{{fenlei}}" wx:key="_id">
     <navigator url="./fenlei_1/fenlei_1?name={{item.name}}" class="fenlei_2">
-    <image src = "{{item.src}}" style="width: 70rpx;height: 70rpx;"></image>
-    <text>{{item.name}}</text>
+      <image src="{{item.src}}" style="width: 70rpx;height: 70rpx;"></image>
+      <text>{{item.name}}</text>
     </navigator>
   </view>
 </view>
@@ -43,13 +47,12 @@
   <!-- 分割线 -->
   <view class="line"></view>
   <block wx:for="{{product}}" wx:key="_id">
-  <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
+    <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
       <image src="{{item.src[0]}}" class="img_1"></image>
-        <view class="product_2">
-          <text>{{item.name}}:￥{{item.price}}</text>
-            <text style="font-size: 25rpx;font-weight: 600;">销量:{{item.num}}</text>
-        </view>
-        </navigator>
-        </block>
+      <view class="product_2">
+        <text style="font-size: 25rpx;">{{item.name}}:￥{{item.price}}</text>
+        <text style="font-size: 25rpx;font-weight: 600;">销量:{{item.num}}</text>
+      </view>
+    </navigator>
+  </block>
 </view>
-
