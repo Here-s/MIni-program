@@ -2,29 +2,19 @@
   "pages": [
     "pages/index/index",
     "pages/fenlei/fenlei",
-    "pages/getOpenId/index",
-    "pages/getMiniProgramCode/index",
-    "pages/deployService/index",
-    "pages/createCollection/index",
-    "pages/uploadFile/index",
-    "pages/selectRecord/index",
-    "pages/updateRecord/index",
-    "pages/updateRecordResult/index",
-    "pages/updateRecordSuccess/index",
-    "pages/sumRecord/index",
-    "pages/sumRecordResult/index",
-    "pages/product_detail/product_detail"
+    "pages/product_detail/product_detail",
+    "pages/shopping_cart/shopping_cart"
   ],
   "window": {
     "backgroundColor": "#ff6801",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff6801",
-    "navigationBarTitleText": "同大线上点餐",
+    "navigationBarTitleText": "同大线上订餐",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "list": [
-      {
+    "list": 
+      [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "./pages/img/首 页.png",
@@ -35,8 +25,14 @@
         "text": "分类",
         "iconPath": "./pages/img/分类.png",
         "selectedIconPath": "./pages/img/分类选中.png"
-      }
-    ]
+      },
+      {
+        "pagePath": "pages/shopping_cart/shopping_cart",
+        "text": "购物车",
+        "iconPath": "./pages/img/购物车未选中.png",
+        "selectedIconPath": "./pages/img/购物车选中.png"
+      }],
+      "selectedColor": "#000000"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

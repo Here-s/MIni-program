@@ -21,6 +21,7 @@
 <view class="product_xq">
   <view style="color:#ff6801" bindtap="xq">商品详情</view>
 </view>
+<!-- product_xq_src   详情页展示图片 -->
 <image src="{{product_xq_src}}" mode="widthFix" style="width:750rpx"></image>
 <view style="align-self: center;height:150rpx">你已经看完了!快下单吧</view>
 

@@ -1,6 +1,8 @@
 // pages/product_detail/product_detail.js
 //初始化数据库
 const db = wx.cloud.database()
+const _ = db.command
+
 Page({
 
   /**
@@ -13,7 +15,79 @@ Page({
     product_detail: "",
     product_num: "",
     product_xq_src: "",
-    id: ""
+    id:""
+  },
+
+  // 加入购物车
+  into_shopping_cart:function(){
+    let that = this
+    db.collection('shopping_cart').where({
+      product_id: that.data.id
+    }).get({
+      success:function(res){
+        console.log(res)
+        if(res.data == ""){
+          db.collection('shopping_cart').add({
+            data:{
+            product_name:that.data.product_name,
+            product_src:that.data.product_src[0],
+            product_price:that.data.product_price,
+            product_num:1,
+            product_id:that.data.id
+            },success:function(res){
+              console.log('商品加入购物车成功',res)
+              wx.showToast({
+                title: '加入成功',
+              })
+            },fail:function(res){
+              console.log('商品加入购物车失败',res)
+            }
+          })
+        }else{
+          wx.showToast({
+            title: '已有这个商品',
+            icon:'none'
+          })
+        }
+      },fail:function(res){
+        console.log(res)
+      }
+    })
+  },
+  // 立即购买
+  buy:function(){
+    let that = this
+    db.collection('shopping_cart').where({
+      product_id: that.data.id
+    }).get({
+      success:function(res){
+        console.log(res)
+        if(res.data == ""){
+          db.collection('shopping_cart').add({
+            data:{
+            product_name:that.data.product_name,
+            product_src:that.data.product_src[0],
+            product_price:that.data.product_price,
+            product_num:1,
+            product_id:that.data.id
+            },success:function(res){
+              console.log('商品加入购物车成功',res)
+              wx.switchTab({
+                url: '../shopping_cart/shopping_cart',
+              })
+            },fail:function(res){
+              console.log('商品加入购物车失败',res)
+            }
+          })
+        }else{
+          wx.switchTab({
+            url: '../shopping_cart/shopping_cart',
+          })
+        }
+      },fail:function(res){
+        console.log(res)
+      }
+    })
   },
 
   /**
@@ -31,7 +105,8 @@ Page({
           product_num: res.data.num,
           product_price: res.data.price,
           product_detail: res.data.detail,
-          product_xq_src: res.data.product_xq_src
+          product_xq_src: res.data.product_xq_src,
+          id:res.data._id
         })
       },
       fail: function (res) {

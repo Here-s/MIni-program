@@ -3,7 +3,7 @@
 
 <!-- 搜索框模块 -->
 <view class="search">
-  <input placeholder="输入要搜索的商品并回车" bindconfirm="search" confirm-type="done"></input>
+  <input placeholder="输入要搜索的商品并回车" bindconfirm="search" confirm-type="done" ></input>
   <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/search.png"
     style="width: 50rpx; height: 50rpx;" ></image>
 </view>
