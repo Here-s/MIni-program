@@ -80,9 +80,9 @@ Page({
   product_jian: function (e) {
     let that = this
     console.log(e)
-    if (e.target.dataset.product_num < 1) {
+    if (e.target.dataset.product_num < 2) {
       wx.showToast({
-        title: '客官不能再少了',
+        title: '大人不能再少了',
         icon: "none"
       })
     } else {

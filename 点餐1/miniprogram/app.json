@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/fenlei/fenlei",
+    "pages/product_fenlei/product_fenlei",
     "pages/product_detail/product_detail",
-    "pages/shopping_cart/shopping_cart"
+    "pages/shopping_cart/shopping_cart",
+    "pages/my/my",
+    "pages/my_record/my_record",
+    "pages/my_address/my_address",
+    "pages/store_login/store_login"
   ],
   "window": {
     "backgroundColor": "#ff6801",
@@ -13,15 +17,15 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "list": 
-      [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "./pages/img/首 页.png",
         "selectedIconPath": "./pages/img/首页-选中.png"
       },
       {
-        "pagePath": "pages/fenlei/fenlei",
+        "pagePath": "pages/product_fenlei/product_fenlei",
         "text": "分类",
         "iconPath": "./pages/img/分类.png",
         "selectedIconPath": "./pages/img/分类选中.png"
@@ -29,9 +33,16 @@
       {
         "pagePath": "pages/shopping_cart/shopping_cart",
         "text": "购物车",
-        "iconPath": "./pages/img/购物车未选中.png",
+        "iconPath": "./pages/img/购物车.png",
         "selectedIconPath": "./pages/img/购物车选中.png"
-      }],
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./pages/img/我的.png",
+        "selectedIconPath": "./pages/img/我的-选中.png"
+      }
+    ],
       "selectedColor": "#000000"
   },
   "sitemapLocation": "sitemap.json",
