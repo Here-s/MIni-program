@@ -9,6 +9,7 @@ Page({
 
   },
 
+  
   formsubmit:function(e){
     console.log(e)
     if(e.detail.value.zhanghu!==""&&e.detail.value.pwd!==""){
