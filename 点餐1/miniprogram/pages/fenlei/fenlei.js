@@ -1,18 +1,50 @@
 // pages/fenlei/fenlei.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    product:[],
+    name:"",
+  },
+  // 比较函数
+  compare:function (property) {
+    return function (a, b) {
+    var value1 = a[property];
+    var value2 = b[property];
+    return value2 - value1;
+    }
   },
 
+  // 点击事件
+  xuanze:function(e){
+    let that = this
+    console.log(e)
+    var res = that.data.product.sort(that.compare(e.currentTarget.dataset.xuanze));
+      that.setData({
+        product:res
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this
+    that.setData({
+      name:options.name
+    })
+    db.collection('product').where({
+      fenlei:options.name
+    }).get({
+      success:function(res){
+        console.log('获取商品成功',res)
+        that.setData({
+          product:res.data
+        })
+      }
+    })
   },
 
   /**

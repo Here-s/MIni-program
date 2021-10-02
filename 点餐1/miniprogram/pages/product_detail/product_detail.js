@@ -14,7 +14,7 @@ Page({
     product_price: 0,
     product_detail: "",
     product_num: "",
-    product_xq_src: "",
+    product_xq_src: [],
     id:""
   },
 

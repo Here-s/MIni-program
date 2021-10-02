@@ -9,6 +9,7 @@ Page({
   data: {
     fenlei:[],
     img:[],
+    
   },
   // 上传图片
   upload_img:function(){
@@ -77,13 +78,13 @@ Page({
           detail:e.detail.value.detail,
           src:that.data.img,
           num:0,
-          product_xq_src:""
+          product_xq_src:that.data.img
         },success:function(res){
           wx.showToast({
             title: '提交成功',
           })
           wx.redirectTo({
-            url: '../store_operation_up/store_operation_up',
+            url: '../store_operation_gl/store_operation_gl',
           })
         }
       })

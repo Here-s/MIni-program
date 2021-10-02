@@ -2,7 +2,7 @@
 
 <!-- 地址模块 -->
 <view class="address">
-  <button bindtap="address" style="width:300rpx" plain="true" type="primary">添加地址</button>
+  <button bindtap="address" style="width:300rpx" plain="true" type="primary">收货信息</button>
   <view class="address_1">
     <view>{{name}}：</view>
     <view>{{phone_number}}</view>

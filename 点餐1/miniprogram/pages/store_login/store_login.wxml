@@ -1,18 +1,23 @@
 <!--pages/store_login/store_login.wxml-->
 <!-- 登录 -->
 <view class="tongyi">
-  <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/商家扫码接入平台.png" style="width:520rpx;height:416rpx;margin-right: 10rpx;margin-top: 50rpx;border-radius: 50rpx;"></image>
+  <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/商家扫码接入平台.png"
+    style="width:520rpx;height:416rpx;margin-right: 10rpx;margin-top: 50rpx;border-radius: 50rpx;"></image>
   <form class="login" bindsubmit="formsubmit">
     <view class="login_1">
-      <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/账号.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/账号.png"
+        style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
       <input name="zhanghu" placeholder="请输入账号"></input>
     </view>
     <view class="line"></view>
     <view class="login_1">
-      <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/密码.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <image src="cloud://cloud1-4gdgr2zq2675d33a.636c-cloud1-4gdgr2zq2675d33a-1307449960/img/tubiao/密码.png"
+        style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
       <input name="pwd" placeholder="请输入密码" password="true"></input>
     </view>
     <view class="line"></view>
     <button form-type="submit" style="background-color: #ff6801;color: #fff;margin-top: 80rpx;">登陆</button>
   </form>
+  <text
+    style="background-color: #040214;color: #fff;margin-top: 60rpx;margin-left: 100rpx;margin-right: 100rpx;">如果您已离开餐厅，请立即与我们联系，否则我们将对您追究法律责任。如果发生欺诈行为，我们依然会对您追究法律责任。</text>
 </view>
