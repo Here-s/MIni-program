@@ -1,0 +1,1 @@
+"D:\Program Files (x86)\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-4gdgr2zq2675d33a --n quickstartFunctions --r --project "D:\wechatMIni\点餐1" --report_start --report
